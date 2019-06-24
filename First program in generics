@@ -1,0 +1,34 @@
+//program to demonstrate generics
+class Gen<T>{
+    T ob;
+    //constructor
+    Gen (T o){
+        ob=o;
+        
+    }
+    //member function 
+    T getob(){
+        return ob;
+    }
+void showtypes(){
+    System.out.println("Type of T is:"+ob.getClass().getName());
+    
+}
+}
+class Gendemo{
+    public static void main(String args[]){
+        Gen <Integer>iob;
+        iob=new Gen<Integer>(78);
+        iob.showtypes();
+        int v=iob.getob();
+        System.out.println("value:"+v);
+        System.out.println();
+        
+        Gen<String>strob;
+        strob=new Gen<String>("I am indian");
+        String str=strob.getob();
+        strob.showtypes();
+        System.out.println(""+str);
+        
+    }
+}
